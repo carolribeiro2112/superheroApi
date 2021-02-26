@@ -14,7 +14,7 @@ function superHeroReducer(state=INITIAL_STATE, action:any){
       return{
         ...state,
         loading:false,
-        arraySuperHeroes: action.payload.data.results,
+        arraySuperHeroes: action.payload.results,
         error:''
       }
       case SuperHeroTypes.GET_SUPERHERO_FAILURE:

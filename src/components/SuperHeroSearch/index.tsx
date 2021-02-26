@@ -12,7 +12,11 @@ const SuperHeroSearch = () => {
 
   const handleSubmit = () => {
     dispatch(SuperHeroesActions.loadSuperHeroRequest(inputValue?.current?.value))
+
+    console.log('input', inputValue?.current?.value)
   }
+
+  
   
   return(
     <Search>
