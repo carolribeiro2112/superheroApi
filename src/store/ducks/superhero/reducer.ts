@@ -3,7 +3,7 @@ import {SuperHeroTypes} from './types';
 const INITIAL_STATE:any = {
   arraySuperHeroes: [],
   loading: false,
-  error:''
+  error:false
 }
 
 function superHeroReducer(state=INITIAL_STATE, action:any){
@@ -14,11 +14,11 @@ function superHeroReducer(state=INITIAL_STATE, action:any){
       return{
         ...state,
         loading:false,
-        arraySuperHeroes: action.payload,
+        arraySuperHeroes: action.payload.data.results,
         error:''
       }
       case SuperHeroTypes.GET_SUPERHERO_FAILURE:
-        return{...state, loading:false, error:action.payload}
+        return{...state, loading:false, error:false}
       default:
         return state
   }

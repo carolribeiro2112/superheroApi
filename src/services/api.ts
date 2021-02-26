@@ -1,9 +1,7 @@
 import axios from 'axios';
 
-const accessToken = 3703124586446855;
-
 const api = axios.create({
-  baseURL:`https://superheroapi.com/api/${accessToken}`
+  baseURL:`https://superheroapi.com/api/3703124586446855`
 })
 
 export default api;

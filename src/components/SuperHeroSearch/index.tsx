@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import {useDispatch} from 'react-redux';
 import {Button} from '@material-ui/core';
+import {Search} from './styles';
 
 import * as SuperHeroesActions from '../../store/ducks/superhero/actions';
 
@@ -14,10 +15,10 @@ const SuperHeroSearch = () => {
   }
   
   return(
-    <div>
+    <Search>
       <input type="text" placeholder="digite aqui" ref={inputValue}/>
-      <Button onClick={handleSubmit}>buscar</Button>
-    </div>
+      <Button variant="contained" color="primary" onClick={handleSubmit}>buscar</Button>
+    </Search>
   );
 }
 
