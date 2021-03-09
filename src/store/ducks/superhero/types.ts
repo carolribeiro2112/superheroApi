@@ -22,7 +22,7 @@ export interface SuperHeroes {
 }
 
 export interface SuperHeroBiography {
-  fullName: string,
+  ["full-name"]: string,
   alterEgos: string,
   firstAppearance: string,
   publisher: string
